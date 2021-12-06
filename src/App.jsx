@@ -6,6 +6,7 @@ import Registro from './pages/auth/Registro';
 import AuthLayout from './layouts/AuthLayout';
 import PrivateLayout from './layouts/PrivateLayout';
 import IndexUsuarios from './pages/usuarios';
+import './styles/global.css';
 
 function App() {
   return (
