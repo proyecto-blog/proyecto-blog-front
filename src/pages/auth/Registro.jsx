@@ -26,7 +26,7 @@ const Registro = () => {
               type='text'
               autoComplete='email'
               required
-              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm'
+              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
               placeholder='Yadira'
             />
           </label>
@@ -36,7 +36,7 @@ const Registro = () => {
               name='apellido'
               type='text'
               required
-              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm'
+              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
               placeholder='Henao'
             />
           </label>
@@ -46,7 +46,7 @@ const Registro = () => {
               name='movil'
               type='number'
               required
-              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm'
+              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
               placeholder='3001230000'
             />
           </label>
@@ -56,7 +56,7 @@ const Registro = () => {
               name='correo'
               type='email'
               required
-              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm'
+              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
               placeholder='usuario@gmail.com'
             />
           </label>
@@ -66,7 +66,7 @@ const Registro = () => {
               name='contraseña'
               type='password'
               required
-              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm'
+              className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
               placeholder='xyu7651_u86'
             />
           </label>
@@ -75,7 +75,7 @@ const Registro = () => {
         <div>
           <button
             type='submit'
-            className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
+            className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500'
           >
             
             <Link to='/login'>Regístrate</Link>
@@ -85,7 +85,7 @@ const Registro = () => {
         <div className='flex items-center justify-between ml-2 block text-sm text-gray-900'>
           <span>¿Ya tienes cuenta?</span>
           <Link to='/login'>
-            <span className='font-medium text-green-600 hover:text-green-500'>Inicia Sesión</span>
+            <span className='font-medium text-gray-600 hover:text-gray-500'>Inicia Sesión</span>
           </Link>
         </div>
       </form>

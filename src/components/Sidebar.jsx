@@ -66,8 +66,8 @@ const SidebarLinks = () => {
           to={to}
           className={({ isActive }) =>
             isActive
-              ? 'sidebar-route text-white bg-green-700'
-              : 'sidebar-route text-gray-900 hover:text-white hover:bg-green-400'
+              ? 'sidebar-route text-white bg-gray-700'
+              : 'sidebar-route text-gray-900 hover:text-white hover:bg-gray-400'
           }
         >
           <div className='flex items-center'>

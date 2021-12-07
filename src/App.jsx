@@ -1,51 +1,50 @@
-import './App.css';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
+
+import { UserContext } from './context/userContext';
+import AuthLayout from './layouts/AuthLayout';
+import PrivateLayout from './layouts/PrivateLayout';
+
+import Inicio from './pages/Inicio';
 import Index from './pages';
 import Login from './pages/auth/Login';
 import Registro from './pages/auth/Registro';
-import AuthLayout from './layouts/AuthLayout';
-import PrivateLayout from './layouts/PrivateLayout';
 import IndexUsuarios from './pages/usuarios';
+
 import './styles/global.css';
+import './styles/tabla.css';
+
+const client = new ApolloClient({
+uri: 'http://localhost:4000/graphql',
+cache: new InMemoryCache(),
+})
 
 function App() {
+  const [userData, setUserData] = useState({});
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='' element={<Index/>} />
+    <ApolloProvider client={client}>
+      <UserContext.Provider value={{ userData, setUserData }}>
+        <BrowserRouter>
+          <Routes>
 
-        {/*<Route path='/' element={<AuthLayout/>} > */}
-          <Route path='/login' element={<Login/>} />
-          <Route path='/login/registro' element={<Registro/>}/>
-        {/*</Route>*/}
+          <Route path='' element={<Inicio />} /> 
 
-        <Route path='/' element={<PrivateLayout />}>
-          <Route path='/usuarios' element={<IndexUsuarios />} />              
-        </Route>
+          <Route path='/login' element={<AuthLayout />}>
+              <Route path='/login' element={<Login />} />
+              <Route path='/login/registro' element={<Registro />} /> 
+            </Route>
 
-
-      </Routes>
-      
-    
-    </BrowserRouter>
-
-    /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>*/
-    
+            <Route path='/' element={<PrivateLayout />}>
+              <Route path='/index' element={<Index />} /> 
+              <Route path='/usuarios' element={<IndexUsuarios />} />  
+            </Route>
+            
+          </Routes>
+        </BrowserRouter>
+      </UserContext.Provider>
+    </ApolloProvider>
   );
 }
 
