@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Switch } from 'react-router-dom';
 import { ApolloProvider, ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 
 import { UserContext } from './context/userContext';
@@ -10,7 +10,11 @@ import Inicio from './pages/Inicio';
 import Index from './pages';
 import Login from './pages/auth/Login';
 import Registro from './pages/auth/Registro';
-import IndexUsuarios from './pages/usuarios';
+import ListarUsuarios from './pages/usuarios/pagesUsuarios';
+import EditarUsuario from './pages/usuarios/editarUsuarios';
+import ListarBlogs from './pages/blogs/pageBlogs';
+
+import blogTesting from './pages/blogs/blogTesting';
 
 import './styles/global.css';
 import './styles/tabla.css';
@@ -36,9 +40,14 @@ function App() {
               <Route path='/login/registro' element={<Registro />} /> 
             </Route>
 
-            <Route path='/' element={<PrivateLayout />}>
-              <Route path='/index' element={<Index />} /> 
-              <Route path='/usuarios' element={<IndexUsuarios />} />  
+            <Route path='/index' element={<Index />} />            
+            <Route path='/testing' element={<blogTesting/> }/>
+            
+
+            <Route path='/' element={<PrivateLayout />}>              
+              <Route path='/usuarios' element={<ListarUsuarios />} />
+              <Route path='/usuarios/editar/:_id' element={<EditarUsuario />} />
+              <Route path='/lista-blogs' element={<ListarBlogs />} />               
             </Route>
             
           </Routes>

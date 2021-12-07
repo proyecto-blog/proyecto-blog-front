@@ -7,6 +7,7 @@ const GET_USUARIOS = gql`
       nombre
       apellido
       correo
+      celular
       estado
       rol
     }
@@ -20,6 +21,7 @@ const GET_USUARIO = gql`
       nombre
       apellido
       correo
+      celular
       estado
       rol
     }

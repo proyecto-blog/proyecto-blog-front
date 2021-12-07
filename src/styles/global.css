@@ -9,3 +9,151 @@
 .sidebar-route {
   @apply rounded-md flex w-full justify-between cursor-pointer items-center m-3 p-3;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap'); 
+
+
+/* Start Global rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;    
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Start body rules - LOGIN & PRODUCTS*/
+body {
+    background: rgb(154, 174, 194) 100%;    
+    color: black;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', arial;
+    font-size: 15;
+    opacity: .95;
+    line-height: 1.6em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(28, 45, 80);
+  border-bottom: 1px solid gray;
+  box-shadow: 1px 1px gray;
+}
+
+.navbar > li {
+  display: flex;
+  align-items: center;
+}
+
+.Footer{  
+  background-color: rgb(154, 174, 194) ;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Montserrat', arial;
+  font-size: 15;       
+  color: black;
+  width: 100%;
+  height: 100px;
+  margin-top: 150;
+  padding-top: 10%;
+  border: 20%;
+    
+} 
+
+.t_Inicio{
+    color: white;
+    text-shadow: 0px 0px 5px #000;   
+    font-family: 'Montserrat', arial;  
+    font-style: normal;    
+    text-align: center;
+    font-size: 60px;    
+    margin-top: 5%;
+}
+
+.t_Subtitulo{
+  color: rgb(255, 255, 255);    
+  font-family: 'Montserrat', arial;  
+  text-align: center;
+  font-size: 15px;    
+  padding-top: 10;
+}
+
+.logo {
+  height: 70px;
+}
+
+.botonGenerico {
+  border: 0px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.botonGenerico:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.mainButton {
+  background-color: rgb(4 151 144);
+  color: white;
+}
+
+.t_catalogo{
+    color: black;
+    font-family: 'Montserrat', arial;  
+    text-align: center;
+    font-size: 15px;    
+    margin-top: 65px;
+}
+
+.catalogoContenedor{        /*ul*/
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.catalogo{              /*il*/
+    margin: 10px;
+    background-color:rgb(28, 45, 80);
+    border-radius: 10px;
+    list-style: none;
+}
+
+.contenedorImagen {
+    width: 240px;
+    height: 350px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+  
+.contenedorImagen:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+  
+.contenedorImagen > img {
+    object-fit: cover;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.tituloImagen{
+    color: white;
+    margin: 10px;
+    font-size: x-large;
+    text-align:center;
+}
