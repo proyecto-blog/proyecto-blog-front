@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    return( 
+    return (
+        <>
         <div className='max-w-md w-full space-y-8'>
             <h2 className='mt-6 text-center text-3xl font-bold text-gray-900'>
                 Inicia sesión en tu cuenta
@@ -66,7 +67,8 @@ const Login = () => {
                     </Link>
                 </div>
             </form>
-        </div>
+            </div>
+            </>
     )
 }
 

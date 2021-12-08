@@ -7,7 +7,7 @@ import Footer from '../components/footer';
 const Inicio = () => {
     return (
         <div className='mainContainer'>
-            <Header />
+            <Header nombreBoton='Ingresar' enlace='/login'/>
             <body>
                 <br></br>
                 <br></br>

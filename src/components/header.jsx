@@ -1,16 +1,16 @@
 import logo from 'media/logo.png';
-import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({nombreBoton, enlace, enlaceAdmin, nombreAdmin}) => {
   return (
     <header>
       <ul className='navbar'>
         <li>
           <img src={logo} alt='imagen' className='logo' />
+          <a className='text-white' href={enlaceAdmin}>{nombreAdmin}</a>
         </li>
         <li>
           <button className='botonGenerico mainButton'>
-            <Link to='/login'>Ingresar</Link>   
+            <a href={enlace}>{nombreBoton}</a>
           </button>
         </li>
       </ul>

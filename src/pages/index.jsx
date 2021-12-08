@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Programming from '../media/programming.jpg';
 import Python from '../media/python.png';
 import ImReact from '../media/react.jpg';
@@ -11,19 +10,15 @@ import Header from '../components/header';
 const Index = () => {
   return (
     <div>
-      <Header />
+      <Header nombreBoton='Crear blog' enlace='/nuevoBlog' nombreAdmin='Admin' enlaceAdmin='/usuarios' />
     <section >
         <h1 className='t_Inicio'>Grupo Konecta</h1>
         <br></br>
       <ul className='catalogoContenedor'>   
-          <CardBlog nombreBlog='Testing' imagen={Programming}>
-            <button className='botonGenerico mainButton'>
-            <Link to='/testing'>hola</Link>   
-          </button>
-          </CardBlog>
-          <CardBlog nombreBlog='Python' imagen={Python} />
-          <CardBlog nombreBlog='React' imagen={ImReact} />
-          <CardBlog nombreBlog= 'Stack MERN' imagen= {Mean} />         
+          <CardBlog nombreBlog='Testing' imagen={Programming} enlace='/testing'/>
+          <CardBlog nombreBlog='Python' imagen={Python} enlace='/python' />
+          <CardBlog nombreBlog='React' imagen={ImReact} enlace='/react'/>
+          <CardBlog nombreBlog= 'Stack MERN' imagen= {Mean} enlace='/mern' />         
       </ul>
      </section>
         <Footer/>

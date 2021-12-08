@@ -5,7 +5,7 @@ import ImagenLogo from './ImagenLogo';
 const SidebarLinks = () => {
     return (
       <ul className='mt-12'>
-        <SidebarRoute to='' title='Inicio' icon='fas fa-home' />
+        <SidebarRoute to='/index' title='Inicio' icon='fas fa-home' />
         <SidebarRoute to='/usuarios' title='Usuarios' icon='fas fa-users' />
         <SidebarRoute to='/lista-blogs' title='Blogs' icon='fas fa-tasks' />        
         <SidebarRoute to='/' title='Cerrar Sesión' icon='fas fa-sign-out-alt' />
